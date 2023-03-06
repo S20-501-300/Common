@@ -7,16 +7,16 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         try {
-            String str = method(list, 10);
+            String str = method(list, 15);
             System.out.println(str);
-        } catch (IllegalArgumentException e) {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("Error: " + e.getMessage());   
         }
     }
 
-    public static String method(List<Integer> list, int size) throws IllegalArgumentException {
+    public static String method(List<Integer> list, int size) throws IndexOutOfBoundsException {
         if (size > list.size()) {
-            throw new IllegalArgumentException("list size smaller than desired size");
+            throw new IndexOutOfBoundsException("list size smaller than desired size");
         }
 
         StringBuilder builder = new StringBuilder();
