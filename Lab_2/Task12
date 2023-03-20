@@ -1,0 +1,4 @@
+Выполните из этого каталога команду javac HelloWorld. java. Получите ли вы в итоге файл класса и где именно?
+javac HelloWorld.java - javac выполнится, а HelloWorld.java не выполнится, потому что он лежит в другом пакете
+
+java HelloWorld
