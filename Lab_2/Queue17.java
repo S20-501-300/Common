@@ -83,6 +83,10 @@ public class Queue17 {
         this.tail = nd;
         this.SZ = 1;
     }
+    
+    public int getSZ(){
+        return SZ;
+    }
 
     public void add(String item){
         Node nd = new Node(item);
