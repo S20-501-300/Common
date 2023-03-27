@@ -30,19 +30,26 @@ public class Queue17 {
         }
         
         public void remove(){
-            if (node == null){
+            Queue17 outer = Queue17.this;
+            Node prev;
+            if (node == outer.head)
+                prev = null;
+            else
+                prev = outer.head;
+            if (prev == null){
                 throw new IllegalStateException();
             }else {
-                Queue17 outer = Queue17.this;
-                if (node == outer.head){
+                while(prev.next != node)
+                    prev = prev.next;
+                if (prev == outer.head){
                     outer.remove();
                 }else{
-                    Node prev = outer.head;
-                    while (prev.next != node)
-                        prev = prev.next;
-                    prev.next = node.next;
-                    if (node == outer.tail)
-                        outer.tail = prev;
+                    Node prevprev = outer.head;
+                    while (prevprev.next != node)
+                        prevprev = prevprev.next;
+                    prevprev.next = node.next;
+                    if (prev == outer.tail)
+                        outer.tail = prevprev;
                     outer.SZ -= 1;
                 }
                 node = null;
