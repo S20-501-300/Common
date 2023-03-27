@@ -1,6 +1,7 @@
 public class Queue17 {
     private Node head;
     private Node tail;
+    private int SZ = 0;
 
     private class Iterator{
         private Node node;
@@ -42,6 +43,7 @@ public class Queue17 {
                     prev.next = node.next;
                     if (node == outer.tail)
                         outer.tail = prev;
+                    outer.SZ -= 1;
                 }
                 node = null;
             }
@@ -72,15 +74,18 @@ public class Queue17 {
         Node nd = new Node(item);
         this.head = nd;
         this.tail = nd;
+        this.SZ = 1;
     }
 
     public void add(String item){
         Node nd = new Node(item);
         this.tail.next = nd;
         this.tail = nd;
+        this.SZ += 1;
     }
 
     public void remove(){
         this.head = this.head.next;
+        this.SZ -= 1;
     }
 }
