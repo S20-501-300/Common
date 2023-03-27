@@ -99,4 +99,18 @@ public class Queue17 {
         this.head = this.head.next;
         this.SZ -= 1;
     }
+    
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder("[");
+        Node it = head;
+        for (int i = 0; i < SZ; i++) {
+            stringBuilder.append(Objects.requireNonNullElse(it.item, "null"));
+            if (i < SZ - 1) {
+                stringBuilder.append(", ");
+            }
+            it = it.next;
+        }
+        stringBuilder.append("]");
+        return stringBuilder.toString();
+    }
 }
