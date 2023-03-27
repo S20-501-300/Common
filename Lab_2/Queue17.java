@@ -27,6 +27,25 @@ public class Queue17 {
         public void next(){
             this.node = this.node.next;
         }
+        
+        public void remove(){
+            if (node == null){
+                throw new IllegalStateException();
+            }else {
+                Queue17 outer = Queue17.this;
+                if (node == outer.head){
+                    outer.remove();
+                }else{
+                    Node prev = outer.head;
+                    while (prev.next != node)
+                        prev = prev.next;
+                    prev.next = node.next;
+                    if (node == outer.tail)
+                        outer.tail = prev;
+                }
+                node = null;
+            }
+        }
     }
     private static class Node{
         private String item;
