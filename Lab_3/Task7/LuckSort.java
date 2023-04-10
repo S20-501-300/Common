@@ -20,6 +20,7 @@ public class LuckSort {
             }
         }
     }
+    
     public static void main(String[] args) {
 
         ArrayList<String> strings= new ArrayList<>();

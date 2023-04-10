@@ -5,9 +5,7 @@ import java.util.Arrays;
 
 
 public class Main {
-    public static void arrayCatalog1(File[] files){
-
-
+    public static void arrayCatalog1(File[] files) {
         Arrays.sort(files, (first, second) -> {
             boolean isFile1 = first.isFile();
             boolean isFile2 = second.isFile();
@@ -22,12 +20,9 @@ public class Main {
         });
     }
 
-
-
-
     public static void main(String[] args) {
 
-        File folder = new File("C:\\Users\\dimak\\IdeaProjects\\Chapter3\\src");
+        File folder = new File("./");
         File[] files = folder.listFiles();
         arrayCatalog1(files);
 

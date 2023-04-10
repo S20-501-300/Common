@@ -21,14 +21,10 @@ public class Main {
         return dir.listFiles(File::isDirectory);
     }
 
-//    public static File[] arrayCatalog2(File dir){
-//
-//    }
-
 
     public static void main(String[] args) {
 
-        File folder = new File("C:\\Users\\dimak\\IdeaProjects\\Chapter3\\src");
+        File folder = new File("./");
 
 //        ArrayList<String> list = arrayCatalog(folder);
 //        for(int i=0; i<list.size(); i++){

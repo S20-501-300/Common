@@ -17,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        File folder = new File("C:\\Users\\dimak\\IdeaProjects\\Chapter3\\src");
+        File folder = new File("./");
         String[] files = arrayCatalog1(folder, "html");
         for(int i=0; i<files.length; i++){
             System.out.println(files[i]);

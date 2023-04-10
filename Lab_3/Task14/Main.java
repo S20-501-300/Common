@@ -15,11 +15,7 @@ public class Main {
     }
 
 
-
     public static void main(String[] args) {
-
-
-
         Employee[] emp = {
                 new Employee(12, "A"),
                 new Employee(15, "A"),
@@ -33,7 +29,7 @@ public class Main {
         Arrays.sort(emp, sort_by_money_by_name());
 
         for (int i=0; i < emp.length; i++){
-            System.out.println(emp[i].getMoney() + "   " + emp[i].getName());
+            System.out.println(emp[i].getMoney() + "\t" + emp[i].getName());
         }
 
         System.out.println("Revers sort by name and by money: \n");
@@ -42,7 +38,7 @@ public class Main {
         Arrays.sort(emp, sort_by_name_by_money());
 
         for (int i=0; i < emp.length; i++){
-            System.out.println(emp[i].getMoney() + "   " + emp[i].getName());
+            System.out.println(emp[i].getMoney() + "\t" + emp[i].getName());
         }
 
     }
