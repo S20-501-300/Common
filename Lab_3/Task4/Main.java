@@ -11,7 +11,7 @@ public class Main {
         }
         return count == 0 ? 0 : sum / count;
     }
-    public void main(String[] args) {
+    public static void main(String[] args) {
         SquareSequence square = new SquareSequence();
         double avg = average(square, 100);
         System.out.println(avg);

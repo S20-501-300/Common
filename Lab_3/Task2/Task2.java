@@ -1,7 +1,7 @@
 package Task2;
 public class Task2 {
 
-    public double average(Measurable[] objects){
+    public static double average(Measurable[] objects){
         int count = 0;
         double sum = 0;
 
@@ -12,7 +12,7 @@ public class Task2 {
         return sum/count;
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
 //        Task2.Measurable[] objects = new Task2.Measurable[10];
 //        for(int i=0; i<10; i++){
 //            objects[i] = new Task2.Employee(i+1);
