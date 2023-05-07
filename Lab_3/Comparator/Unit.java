@@ -11,4 +11,9 @@ public class Unit {
     public int getSecond(){
         return second;
     }
+    
+    @Override
+    public String toString(){
+        return "measure: " + measure + ", second: " + second;
+    }
 }
