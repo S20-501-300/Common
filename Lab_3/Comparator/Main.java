@@ -1,10 +1,22 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
         Unit a = new Unit(1, 5);
         Unit b = new Unit(1, 10);
+        Unit c = new Unit(1, 3);
+        Unit d = new Unit(2, 1);
+        List<Unit> mas = new ArrayList<>();
+        mas.add(a);
+        mas.add(b);
+        mas.add(c);
+        mas.add(d);
 
-        MyComparator<Unit> comp = new Test();
-        System.out.println(comp.compare(a, b));
-        System.out.println(comp.thenComparing((a1, b1) -> a1.getSecond()-b1.getSecond()).compare(a, b));
+        mas.sort(new Test());
+        for (Unit i : mas){
+            System.out.println(i.toString());
+        }
     }
 }
