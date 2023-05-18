@@ -31,6 +31,6 @@ public class App
         System.out.println(queue.toString());
         System.out.println("Removing...");
         it.remove();
-        System.out.println(queue.toString());     
+        System.out.println(queue.toString());
     }
 }
