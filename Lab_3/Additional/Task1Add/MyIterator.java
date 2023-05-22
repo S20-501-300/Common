@@ -15,6 +15,7 @@ public class MyIterator<T> implements Iterator<T> {
 
     private T item = null;
     private T result = null;
+    
     private boolean isReduce = false;
     private BiFunction<T, T, T> func =
             (a, b) -> {
@@ -67,7 +68,7 @@ public class MyIterator<T> implements Iterator<T> {
     }
 
     public MyIterator<T> filter(Predicate<T> predicate){
-        return  new MyIterator<T>(this, predicate);
+        return new MyIterator<T>(this, predicate);
     }
     public MyIterator<T> reduce(BiFunction<T, T, T> func) {
         return new MyIterator<T>(this, func);

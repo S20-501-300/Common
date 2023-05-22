@@ -1,0 +1,12 @@
+String getCanonicalName ()
+Получают имя данного класса
+String getSimpleName ()
+с дополнительными сведениями для массивов
+String getTypeName ()
+внутренних классов,
+String getName ()
+обобщенных классов
+String toString ()
+и модификаторов доступа
+String toGenericStringO
+(см. упражнение 8 в конце этой главы)

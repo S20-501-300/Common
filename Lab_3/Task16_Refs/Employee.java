@@ -8,7 +8,7 @@ public class Employee {
     public String getName(){ return name; }
     public void setName(String name){ this.name = name; }
 
-    void hi(){ 
+    void hi() { 
         System.out.println("Hi from " + this.name);
     }
 

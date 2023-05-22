@@ -18,7 +18,7 @@ public class Main {
 
         BiFunction<Integer, Integer, Integer> func =
             (a, b) -> {
-                return b;
+                return a + b;
         };
 
         MyIterator<Integer> reduceIterator = unionIterator.reduce(func);
@@ -41,7 +41,7 @@ public class Main {
         Predicate<Integer> isHigherThan50 = x -> x > 50;
         MyIterator<Integer> fliterIterator = unionIterator.filter(isHigherThan50);
 
-        System.out.println("Filter result");
+        System.out.println("Filter result (x > 50)");
         while (fliterIterator.hasNext()) {
             System.out.println(fliterIterator.next());
         }
